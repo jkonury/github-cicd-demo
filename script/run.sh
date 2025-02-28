@@ -20,7 +20,7 @@ then
        -Dspring.profiles.active=${PROFILE} \
        ${JAVA_OPTS} \
        -javaagent:/scouter/scouter.agent.jar \
-       -Dscouter.config=/scouter/local.conf \
+       -Dscouter.config=/scouter/docker-local.conf \
        -Dobj_host_name=${IP} \
        -Dnet_collector_ip=${SCOUTER_COLLECTOR_IP} \
        -Dobj_name=${APP_NAME}-${POSTFIX} \
@@ -32,7 +32,7 @@ else
        -Dspring.profiles.active=${PROFILE} \
        ${JAVA_OPTS} \
        -javaagent:/scouter/scouter.agent.jar \
-       -Dscouter.config=/scouter/local.conf \
+       -Dscouter.config=/scouter/docker-local.conf \
        -Dobj_host_name=${IP} \
        -Dnet_collector_ip=${SCOUTER_COLLECTOR_IP} \
        -Dobj_name=${APP_NAME}-${POSTFIX} \
