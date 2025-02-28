@@ -1,0 +1,12 @@
+services:
+  next-graphql:
+    image: github-cicd-demo:1.0.0
+    container_name: github-cicd-demo
+    ports:
+      - "8080:8080"
+    environment:
+      TZ: Asia/Seoul
+      "--spring.profiles.active": local
+      PROFILE: local
+      APP_NAME: github-cicd-demo
+      SCOUTER_COLLECTOR_IP: ${SCOUTER_COLLECTOR_IP}

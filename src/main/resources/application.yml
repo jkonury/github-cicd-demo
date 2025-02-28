@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: github-cicd-demo
+  jpa:
+    open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
