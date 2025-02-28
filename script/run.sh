@@ -12,7 +12,7 @@ fi
 IP=$(hostname -i)
 POSTFIX=`echo ${IP} | awk -F'.' '{print $3"." $4}'`
 APP_NAME=${APP_NAME:-"demo-docker"}
-echo "start application profile=${PROFILE} APP_NAME=${APP_NAME}, IP=${IP}, POSTFIX=${POSTFIX}"
+echo "start application SCOUTER_COLLECTOR_IP=${SCOUTER_COLLECTOR_IP}  profile=${PROFILE} APP_NAME=${APP_NAME}, IP=${IP}, POSTFIX=${POSTFIX}"
 
 if [ "${SCOUTER_ENABLE}" = true ]
 then
