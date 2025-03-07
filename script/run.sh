@@ -1,6 +1,6 @@
 #!/bin/sh
 
-JAVA_OPTS="-XX:+UseZGC -XX:MaxRAMPercentage=80.0 -Duser.timezone=Asia/Seoul -Djava.net.preferIPv4Stack=true"
+JAVA_OPTS="-XX:+UseZGC -XX:MaxRAMPercentage=80.0 -Djava.net.preferIPv4Stack=true"
 
 if [ "prod" = "${PROFILE}" ]
 then
