@@ -20,13 +20,14 @@ FROM bellsoft/liberica-runtime-container:jre-21-stream-musl
 
 WORKDIR /app
 
-ENV TZ=Asia/Seoul
-ENV PROFILE=dev
-ENV APP_NAME=demo-app
+#ENV TZ=Asia/Seoul
+ENV PROFILE=docker
+ENV APP_NAME=github-cicd-demo
 ENV SCOUTER_COLLECTOR_IP=127.0.0.1
+ENV SCOUTER_ENABLE=true
 
-RUN apk --no-cache add tzdata &&  \
-    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+#RUN apk --no-cache add tzdata &&  \
+#    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 COPY scouter/* /scouter/
 COPY --from=optimizer /app/app/* ./
