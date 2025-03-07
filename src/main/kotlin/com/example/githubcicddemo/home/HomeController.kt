@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController
 import java.net.InetAddress
 
 @RestController
-class HoneController {
+class HomeController {
     val log = KotlinLogging.logger {}
 
     @GetMapping("/")
